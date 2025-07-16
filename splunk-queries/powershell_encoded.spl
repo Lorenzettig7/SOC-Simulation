@@ -1,0 +1,1 @@
+index=main sourcetype=_json Image="*powershell.exe" CommandLine="*-enc*" OR CommandLine="*FromBase64String*"
