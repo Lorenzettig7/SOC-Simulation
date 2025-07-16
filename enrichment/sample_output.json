@@ -1,0 +1,14 @@
+{
+    "ip_enrichment": {
+        "error": {
+            "code": "WrongCredentialsError",
+            "message": "Wrong API key"
+        }
+    },
+    "hash_enrichment": {
+        "error": {
+            "code": "WrongCredentialsError",
+            "message": "Wrong API key"
+        }
+    }
+}
