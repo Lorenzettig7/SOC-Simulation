@@ -1,0 +1,17 @@
+title: Potential Credential Dumping via LSASS Access
+id: b3e5a5aa-918c-4cd9-9f22-3d72f1d3b987
+description: Detects suspicious process access to lsass.exe indicating potential credential dumping
+logsource:
+  category: process_access
+  product: windows
+detection:
+  selection:
+    TargetImage|endswith: 'lsass.exe'
+    GrantedAccess:
+      - '0x1010'
+      - '0x1410'
+  condition: selection
+level: high
+tags:
+  - attack.t1003.001
+  - credential_access

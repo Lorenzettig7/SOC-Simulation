@@ -1,0 +1,1 @@
+index=main sourcetype=_json TargetImage="*lsass.exe" (GrantedAccess="0x1010" OR GrantedAccess="0x1410")
