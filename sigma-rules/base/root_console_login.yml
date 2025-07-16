@@ -1,0 +1,15 @@
+title: AWS Root Console Login
+id: a3e5d90f-22b3-42e3-99f1-f6b123456789
+description: Detects AWS root user logging into the management console
+logsource:
+  service: cloudtrail
+  product: aws
+detection:
+  selection:
+    eventSource: "signin.amazonaws.com"
+    eventName: "ConsoleLogin"
+    userIdentity.type: "Root"
+  condition: selection
+level: critical
+tags:
+  - attack.t1078
